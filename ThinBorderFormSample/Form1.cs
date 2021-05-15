@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ThinBorderFormSample
 {
-    public partial class Form1 : rrSoft.ThinBorderForm
+    public partial class Form1 : rrSoft.Windows.Forms.ThinBorderForm
     {
         public Form1()
         {

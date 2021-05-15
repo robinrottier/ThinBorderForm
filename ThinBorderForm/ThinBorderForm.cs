@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rrSoft
+namespace rrSoft.Windows.Forms
 {
     //[System.ComponentModel.DesignerCategory("")]
     public class ThinBorderForm : Form
@@ -49,8 +49,23 @@ namespace rrSoft
             forceFormProperties();
         }
 
-        public int BorderWidth { get; set; }                // Border size
-        public int CaptionHeight { get; set; }              // Caption height
+        /// <summary>
+        /// Size of fake non-client border inside control to allow for sizing handle pickup
+        /// </summary>
+        public int BorderWidth
+        {
+            get { return borderWidth; }
+            set { borderWidth = value; forceFormProperties(); }
+        }
+        private int borderWidth;
+
+        public int CaptionHeight
+        {
+            get { return captionHeight; }
+            set { captionHeight = value; forceFormProperties(); }
+        }
+        private int captionHeight;
+
         public Color CaptionColor { get; set; }             // Caption Colour
         public int CaptionTextWidth { get; set; }           // ccaption text width -- 0 is auto
 
